@@ -1,0 +1,50 @@
+<table border="1" cellspacing="0" cellpadding="2" style="width:auto" id="profiler_table2">
+    <thead>
+        <tr>
+            <th>Query</th>
+            <th>Time</th>
+            <th>Stack</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($this->getProfiler()->getQueryProfiles() as $query): ?>
+        <tr>
+            <td align="right"><?php echo $query->getQuery(); ?></td>
+            <td align="right"><?php echo number_format($query->getElapsedSecs(), 4); ?></td>
+            <td align="right">
+                <p class="toggle">Toggle</p>
+                <div class="stack" style="display:none">
+                    <table border="1" cellspacing="0" cellpadding="2" style="width:auto">
+                    <?php foreach($query->getStack() as $part): ?>
+                    <tr>
+                        <?php if(isset($part['params']['include_filename'])): ?>
+                        
+                        <?php else: ?>
+                        
+                        <?php endif; ?>
+                        <td align="right">
+                        <?php echo $part['class']; ?>
+                        <?php echo (isset($part['class']) && isset($part['function']))? '::' : ''; ?>
+                        <?php echo $part['function']; ?>
+                        </td>
+                        <td align="right"><?php echo $part['file']; ?></td>
+                        <td align="right"><?php echo $part['line']; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    jQuery(".toggle").click(function(){
+        jQuery(this).next(".stack").toggle();
+    });
+    jQuery("#profiler_table2").DataTable();
+});
+</script>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <LDusan_QueryTrace>
+            <version>1.0.0</version>
+        </LDusan_QueryTrace>
+    </modules>
+    <global>
+        <models>
+            <ldusan_querytrace>
+                <class>LDusan_QueryTrace_Model</class>
+            </ldusan_querytrace>
+        </models>
+        <blocks>
+            <ldusan_querytrace>
+                <class>LDusan_QueryTrace_Block</class>
+            </ldusan_querytrace>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <ldusan_querytrace>
+                    <file>ldusan_querytrace.xml</file>
+                </ldusan_querytrace>
+            </updates>
+        </layout>            
+    </frontend>
+</config>

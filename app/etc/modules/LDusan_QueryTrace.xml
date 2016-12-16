@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <LDusan_QueryTrace>
+            <active>true</active>
+            <codePool>community</codePool>
+        </LDusan_QueryTrace>
+    </modules>
+</config>
