@@ -17,17 +17,8 @@
                     <table border="1" cellspacing="0" cellpadding="2" style="width:auto">
                     <?php foreach($query->getStack() as $part): ?>
                     <tr>
-                        <?php if(isset($part['params']['include_filename'])): ?>
-                        
-                        <?php else: ?>
-                        
-                        <?php endif; ?>
-                        <td align="right">
-                        <?php echo $part['class']; ?>
-                        <?php echo (isset($part['class']) && isset($part['function']))? '::' : ''; ?>
-                        <?php echo $part['function']; ?>
-                        </td>
-                        <td align="right"><?php echo $part['file']; ?></td>
+                        <td align="right"><?php echo $this->formatClassAndMethod($part); ?></td>
+                        <td align="right"><?php echo $this->formatFilePath($part['file']); ?></td>
                         <td align="right"><?php echo $part['line']; ?></td>
                     </tr>
                     <?php endforeach; ?>

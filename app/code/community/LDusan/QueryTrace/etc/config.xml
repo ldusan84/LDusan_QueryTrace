@@ -11,10 +11,20 @@
                 <class>LDusan_QueryTrace_Model</class>
             </ldusan_querytrace>
         </models>
+        <helpers>
+            <ldusan_querytrace>
+                <class>LDusan_QueryTrace_Helper</class>
+            </ldusan_querytrace>
+        </helpers>
         <blocks>
             <ldusan_querytrace>
                 <class>LDusan_QueryTrace_Block</class>
             </ldusan_querytrace>
+            <core>
+                <rewrite>
+                    <profiler>LDusan_QueryTrace_Block_Core_Profiler</profiler>
+                </rewrite>
+            </core>
         </blocks>
     </global>
     <frontend>
@@ -26,4 +36,12 @@
             </updates>
         </layout>            
     </frontend>
+    <default>
+        <dev>
+            <ldusanquerytrace>
+                <enable>0</enable>
+                <hidedefault>0</hidedefault>
+            </ldusanquerytrace>
+        </dev>
+    </default>
 </config>
