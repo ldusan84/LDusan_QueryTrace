@@ -10,6 +10,6 @@ If you inherit a legacy project or install a Magento theme, chances are that you
 
 1. Clone the git repository
 2. Copy files to your Magento installation
-3. Open your app/etc/local.xml and add <profiler>1</profiler> inside the <connection> node.
+3. Open your app/etc/local.xml and add ```xml<profiler>1</profiler>``` inside the <connection> node.
 4. Login to admin and enable the module in System -> Configuration -> Advanced -> Developer -> LDusan QueryTrace
 4. Clear cache
