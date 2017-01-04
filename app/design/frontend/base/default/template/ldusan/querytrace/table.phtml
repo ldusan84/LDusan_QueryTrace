@@ -1,4 +1,4 @@
-<table border="1" cellspacing="0" cellpadding="2" style="width:auto" id="profiler_table2">
+<table border="1" cellspacing="0" cellpadding="2" style="width:auto" id="profiler_table2" style="background:white">
     <thead>
         <tr>
             <th>Query</th>
@@ -9,7 +9,7 @@
     <tbody>
     <?php foreach ($this->getProfiler()->getQueryProfiles() as $query): ?>
         <tr>
-            <td align="right"><?php echo $query->getQuery(); ?></td>
+            <td align="left"><?php echo $query->getQuery(); ?></td>
             <td align="right"><?php echo number_format($query->getElapsedSecs(), 4); ?></td>
             <td align="right">
                 <p class="toggle">Toggle</p>
