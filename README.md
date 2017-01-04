@@ -15,7 +15,7 @@ If you inherit a legacy project or install a Magento theme, chances are that you
 
 # Screenshots
 
-![Screenshot 1](https://drive.google.com/open?id=0B8BVKWpy81-5SEpGS3pfUV9tU1U?raw=true)
+![Screenshot 1](/../screenshots/screenshot1.png?raw=true)
 
 # TODO
 
