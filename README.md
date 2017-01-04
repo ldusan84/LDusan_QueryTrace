@@ -16,6 +16,7 @@ If you inherit a legacy project or install a Magento theme, chances are that you
 # Screenshots
 
 ![Screenshot 1](/../screenshots/screenshot1.png?raw=true)
+![Screenshot 2](/../screenshots/screenshot2.png?raw=true)
 
 # TODO
 
