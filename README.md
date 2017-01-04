@@ -13,6 +13,10 @@ If you inherit a legacy project or install a Magento theme, chances are that you
 4. Login to admin and enable the module in System -> Configuration -> Advanced -> Developer -> LDusan QueryTrace.
 4. Clear cache.
 
+# Screenshots
+
+![Screenshot 1](https://drive.google.com/open?id=0B8BVKWpy81-5SEpGS3pfUV9tU1U?raw=true)
+
 # TODO
 
  - Better styling and UI
